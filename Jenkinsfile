@@ -10,6 +10,7 @@ pipeline {
                 sh('cat /tmp/test-jenkins/docker.sh')
                 sh('cd  /tmp/test-jenkins/')
                 sh('ls  /tmp/test-jenkins/')
+                sh('bash -x ./docker.sh')
             }
         }
     }
