@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                bash('printenv')
+                sh('printenv')
             }
         }
     }
