@@ -3,4 +3,4 @@ pipeline {
         docker { image 'nginx:latest' }
     }
 }
-}
+
