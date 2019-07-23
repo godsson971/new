@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh('/usr/bin/docker --version')
+                sh('./docker.sh')
 
             }
         }
