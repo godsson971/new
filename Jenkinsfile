@@ -1,12 +1,11 @@
-pipeline {
-    agent {
-        docker { restart 'preprod' }
-    }
+node('preprod') {
+ 
     stages {
         stage('Test') {
             steps {
-                sh 'docker ps'
+        sh 'docker stats preprod'
             }
         }
     }
 }
+ 
