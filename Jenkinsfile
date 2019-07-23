@@ -1,11 +1,11 @@
 pipeline {
     agent {
-        docker { image 'nginx:latest' }
+        docker { image 'node:nginx }
     }
     stages {
         stage('Test1') {
             steps {
-                sh 'docker images nginx'
+                sh 'node --version'
             }
         }
     }
