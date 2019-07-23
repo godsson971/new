@@ -1,5 +1,12 @@
+pipeline {
     agent {
-        docker { image 'nginx:latest' }
+        docker { image 'node:7-alpine' }
     }
-
-
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
+}
