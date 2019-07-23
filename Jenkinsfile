@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh('./docker.sh')
+                sh('chmod +x docker.sh')
 
             }
         }
