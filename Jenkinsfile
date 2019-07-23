@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh('build -t .')
+                sh('/usr/bin/docker --version')
 
             }
         }
