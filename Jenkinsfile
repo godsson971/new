@@ -1,19 +1,21 @@
 pipeline {
+  agent {
+    docker {
+      image 'nginx'
+      args '-d -p 8082:80 -v /home/stagiaire/docker-nginx-2/html:/usr/share/nginx/html nginx'
+ 
+    }
+  }
 
   stages {
-    stage ('Building') {
+    stage ('Testing') {
       steps {
-        sh '''
-        docker run -i --rm -v ./:/src -w /src IMAGE_ID  /bin/bash -c "mvn test package" 
-        '''
+        sh 'echo testing'
       }
     }
-    stage ('dockerization') {
+    stage ('Deploying') {
       steps {
-        sh '''
-        docker build -t your_tag .
-        docker push ...
-        '''
+        sh 'echo deploying'
       }
     }
   }
