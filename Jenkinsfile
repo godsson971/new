@@ -1,5 +1,5 @@
 pipeline {
-    agent { docker 'nginx:preprod' } 
+    agent { docker 'preprod' } 
     stages {
         stage('Test1') {
             steps {
